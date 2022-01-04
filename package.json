@@ -1,8 +1,8 @@
 {
   "name": "ignite-react",
-  "description": "monorepo for Rocketseat's ignite react stuff",
   "version": "0.0.0",
   "private": true,
+  "description": "monorepo for Rocketseat's ignite react stuff",
   "repository": {
     "type": "git",
     "url": "git+https://github.com:mrocha98/ignite-react.git"
@@ -12,14 +12,11 @@
     "build": "pnpm -r --stream run build ",
     "clean:dist": "pnpm --parallel exec rimraf dist",
     "dev": "pnpm -r run dev",
-    "postinstall": "husky install && pnpm run sort && pnpm run pkg:check",
-    "pkg:check": "manypkg check",
-    "pkg:fix": "manypkg fix",
+    "postinstall": "husky install && pnpm run sort",
     "sort": "pnpm --parallel exec sort-package-json"
   },
   "dependencies": {
     "@babel/core": "~7.16.0",
-    "@manypkg/cli": "~0.19.1",
     "@swc/cli": "~0.1.55",
     "@swc/core": "~1.2.126",
     "@swc/jest": "~0.2.15",
