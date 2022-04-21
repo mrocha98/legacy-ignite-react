@@ -1,9 +1,0 @@
-{
-  "name": "@ignite-react/prettier",
-  "version": "0.0.0",
-  "license": "BSD-3-Clause-Clear",
-  "main": ".prettierrc.js",
-  "dependencies": {
-    "prettier": "~2.5.1"
-  }
-}

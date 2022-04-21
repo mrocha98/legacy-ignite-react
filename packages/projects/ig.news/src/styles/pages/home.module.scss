@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as vars;
+
+.main {
+  max-width: map-get(vars.$breakpoints, lg);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: calc(100vh - 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero {
+  max-width: map-get(vars.$breakpoints, sm);
+}
+
+.greetings {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 4.5rem;
+  line-height: bold;
+  font-weight: 900;
+  margin-top: 2.5rem;
+
+  > span {
+    color: var(--cyan-500);
+  }
+}
+
+.pricing-text {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 1.5rem;
+
+  > span {
+    color: var(--cyan-500);
+    font-weight: bold;
+  }
+}
+
+.subscribe-button {
+  margin-top: 2.5rem;
+}

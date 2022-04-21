@@ -1,0 +1,33 @@
+{
+  "name": "@projects/redux-intro",
+  "version": "0.0.0",
+  "private": true,
+  "license": "BSD-3-Clause-Clear",
+  "author": "Matheus Rocha <matheus_rocha98@outlook.com>",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "concurrently --kill-others \"pnpm dev:server\" \"pnpm dev:ui\"",
+    "dev:server": "json-server server.json -p 3333",
+    "dev:ui": "vite --open --host",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/work-sans": "~4.5.7",
+    "axios": "~0.26.1",
+    "concurrently": "~7.1.0",
+    "immer": "~9.0.12",
+    "json-server": "~0.17.0",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "react-redux": "~7.2.6",
+    "redux": "~4.2.0",
+    "redux-devtools-extension": "~2.13.9",
+    "redux-saga": "~1.1.3",
+    "sanitize.css": "~13.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "~1.3.1",
+    "typescript": "~4.6.3",
+    "vite": "~2.9.5"
+  }
+}

@@ -1,0 +1,15 @@
+@use '../abstracts/mixins' as m;
+
+html {
+  @include m.for-screen(md) {
+    font-size: 87.5%;
+  }
+  @include m.for-screen(lg) {
+    font-size: 93.75%;
+  }
+}
+
+body {
+  background: var(--gray-900);
+  color: var(--white);
+}

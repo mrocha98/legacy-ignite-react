@@ -1,23 +1,28 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
     node: true,
     jest: true,
   },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:testing-library/react',
+    'next/core-web-vitals',
+    'prettier',
+  ],
+  plugins: ['@typescript-eslint', 'testing-library', 'prettier'],
   settings: {
     react: {
       version: 'detect',
     },
+    next: {
+      rootDir: ['packages/challenges/**/', 'packages/projects/**/'],
+    },
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'next/core-web-vitals',
-    'plugin:prettier/recommended',
-  ],
-  plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -27,14 +32,12 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'prettier/prettier': [
-      'error',
-      { ...require('@ignite-react/prettier') },
-      { usePrettierrc: false },
-    ],
+    'prettier/prettier': 'error',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    'no-console': 'warn',
   },
 }

@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  stripe-cli:
+    image: stripe/stripe-cli:v1.8.6
+    container_name: ignews-stripe-cli
+    restart: unless-stopped
+    env_file:
+      - .env.local
+    network_mode: host
+    command: [
+      "listen",
+      "--forward-to",
+      "127.0.0.1:3000/api/webhooks"
+    ]

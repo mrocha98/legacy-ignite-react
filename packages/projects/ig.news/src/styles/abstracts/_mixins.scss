@@ -1,0 +1,11 @@
+@use 'variables' as vars;
+
+@mixin for-screen($breakpoint) {
+  @if map-has-key(vars.$breakpoints, $breakpoint) {
+    @media (min-width: #{map-get(vars.$breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @error "value `#{$breakpoint}` is not a valid breakpoint";
+  }
+}

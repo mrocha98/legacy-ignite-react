@@ -1,0 +1,39 @@
+.wrapper {
+  height: 3rem;
+  border-radius: 3rem;
+  background: var(--gray-850);
+  border: 0;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  transition: filter 200ms;
+
+  &:first-child {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.github-icon-signed {
+  color: #04d361;
+}
+
+.github-icon-unsigned {
+  color: #eba417;
+}
+
+.cross-icon {
+  color: #737380;
+  margin-left: 1rem;
+}
