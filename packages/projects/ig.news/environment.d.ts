@@ -11,6 +11,8 @@ declare global {
       GITHUB_CLIENT_SECRET: string
       FAUNADB_KEY: string
       JWT_SECRET: string
+      PRISMIC_REPOSITORY_NAME: string
+      PRISMIC_ACCESS_TOKEN: string
     }
   }
 }

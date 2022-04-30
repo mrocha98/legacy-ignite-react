@@ -10,13 +10,11 @@
     "eslint-config-next": "~12.1.5",
     "eslint-config-prettier": "~8.5.0",
     "eslint-plugin-prettier": "~4.0.0",
-    "eslint-plugin-testing-library": "~5.3.1"
-  },
-  "peerDependencies": {
-    "next": "*",
-    "prettier": "*",
-    "react": "*",
-    "react-dom": "*",
-    "typescript": "*"
+    "eslint-plugin-testing-library": "~5.3.1",
+    "next": "~12.1.5",
+    "prettier": "~2.6.2",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "typescript": "~4.6.3"
   }
 }

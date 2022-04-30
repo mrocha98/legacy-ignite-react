@@ -1,24 +1,26 @@
-import Link from 'next/link'
-import cla from 'classnames'
-
 import styles from './header.module.scss'
 import { AuthButton } from '../auth-button'
+import { ActiveLink } from '../active-link'
 
-export const Header = () => (
-  <header className={styles.wrapper}>
-    <div className={styles.content}>
-      <img src='/images/logo.svg' alt='ig.news' />
+export const Header = () => {
+  const activeClassName = styles['link-active']
 
-      <nav className={styles['nav-links']}>
-        <Link href='/'>
-          <a className={cla(styles.link, `${styles['link-active']}`)}>Home</a>
-        </Link>
-        <Link href='/posts'>
-          <a className={styles.link}>Posts</a>
-        </Link>
-      </nav>
+  return (
+    <header className={styles.wrapper}>
+      <div className={styles.content}>
+        <img src='/images/logo.svg' alt='ig.news' />
 
-      <AuthButton />
-    </div>
-  </header>
-)
+        <nav className={styles['nav-links']}>
+          <ActiveLink activeClassName={activeClassName} href='/'>
+            <a className={styles.link}>Home</a>
+          </ActiveLink>
+          <ActiveLink activeClassName={activeClassName} href='/posts'>
+            <a className={styles.link}>Posts</a>
+          </ActiveLink>
+        </nav>
+
+        <AuthButton />
+      </div>
+    </header>
+  )
+}
